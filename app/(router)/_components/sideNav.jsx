@@ -9,8 +9,12 @@ function sideNav() {
     { id: 3, name: "Be Instructor", icon: GraduationCap },
   ];
   return (
-    <div className="p-5 bg-white shadow-sm border h-screen">
-      <Image src="/logo.svg" alt="logo" width={100} height={100} />
+    <div className="p-5  bg-white shadow-sm border h-screen">
+      <div className="flex justify-center mb-5">
+        {" "}
+        {/* Centering the image */}
+        <Image src="/logo.svg" alt="logo" width={100} height={100} />
+      </div>
 
       <hr className="mt-7"></hr>
       <div className="mt-8">
