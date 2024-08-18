@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/select";
 import CourseItem from "./CourseItem";
 import Image from "next/image";
+import Link from "next/link";
 
 function CourseList() {
   const [courseList, setCourseList] = useState([]);
@@ -56,24 +57,26 @@ function CourseList() {
               ></div>
             ))
           : courseList.map((item, index) => (
-              <div
-                key={index}
-                className="border rounded-xl hover:shadow-md cursor-pointer hover:shadow-purple-600"
-              >
-                <Image
-                  src={item.banner?.url}
-                  width={500}
-                  height={150}
-                  alt="banner"
-                  className="rounded-t-xl w-full h-[150px] object-cover"
-                />
-                <div className="flex flex-col gap-1 p-3">
-                  <h2 className="font-semibold">{item.name}</h2>
-                  <h2 className="text-sm text-gray-500">
-                    {item.free ? "Free" : "Paid"}
-                  </h2>
+              <Link href={`/course-preview/${item.id}`}>
+                <div
+                  key={index}
+                  className="border rounded-xl hover:shadow-md cursor-pointer hover:shadow-purple-600"
+                >
+                  <Image
+                    src={item.banner?.url}
+                    width={500}
+                    height={150}
+                    alt="banner"
+                    className="rounded-t-xl w-full h-[150px] object-cover"
+                  />
+                  <div className="flex flex-col gap-1 p-3">
+                    <h2 className="font-semibold">{item.name}</h2>
+                    <h2 className="text-sm text-gray-500">
+                      {item.free ? "Free" : "Paid"}
+                    </h2>
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
       </div>
     </div>
