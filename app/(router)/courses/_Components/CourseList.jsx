@@ -45,30 +45,35 @@ function CourseList() {
         </Select>
       </div>
       <div className=" grid grid-cols-2 lg:grid-cols-3 gap-3">
-        {courseList.length > 0 ? (
-          courseList.map((item, index) => (
-            <div className="" key={index}>
-              {/* <CourseItem course={item} /> */}
-              <div className="border rounded-xl hover:shadow-md cursor-pointer hover:shadow-purple-600">
-                <Image
-                  src={item.banner?.url}
-                  width={500}
-                  height={150}
-                  alt="banner"
-                  className="rounded-t-xl"
-                />
-                <div className="flex flex-col gap-1 p-1">
-                  <h2 className="font-semibold">{item.name}</h2>
-                  <h2 className="font-semibold">
-                    {item.free ? "Free" : "Paid"}
-                  </h2>
+        {courseList.length > 0
+          ? courseList.map((item, index) => (
+              <div className="" key={index}>
+                {/* <CourseItem course={item} /> */}
+                <div className="border rounded-xl hover:shadow-md cursor-pointer hover:shadow-purple-600">
+                  <Image
+                    src={item.banner?.url}
+                    width={500}
+                    height={150}
+                    alt="banner"
+                    className="rounded-t-xl"
+                  />
+                  <div className="flex flex-col gap-1 p-1">
+                    <h2 className="font-semibold">{item.name}</h2>
+                    <h2 className="font-semibold">
+                      {item.free ? "Free" : "Paid"}
+                    </h2>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))
-        ) : (
-          <div>No courses available.</div>
-        )}
+            ))
+          : [1, 2, 3, 4, 5, 6, 7].map((item, index) => {
+              <div
+                key={index}
+                className="w-full h-[240px] rounded-xl m-2 bg-slate-200 animate-pulse"
+              >
+                No courses available.
+              </div>;
+            })}
       </div>
     </div>
   );
