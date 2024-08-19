@@ -47,18 +47,23 @@ function CoursePreview({ params = { courseId: "clzwxkttu01ii08lb3v2o2nsn" } }) {
   return loading ? (
     <div>Loading...</div>
   ) : (
-    <div className="p-4">
+    <div className=" p-4">
       <h1 className="text-2xl font-bold mb-4">{course.name}</h1>
-      <div className="mb-4">
+      <div className=" mb-4">
         <h2 className="text-xl font-semibold">Chapters:</h2>
-        <ul className="list-disc pl-5">
-          {course.chapters.map((chapter) => (
-            <li key={chapter.id} className="mb-2">
-              <h3 className="font-semibold">{chapter.name}</h3>
-              <p className="text-sm text-gray-600">{chapter.chapterContent}</p>
-            </li>
-          ))}
-        </ul>
+        <div className="flex flex-col items-center">
+          {" "}
+          <ul className="list-disc pl-5">
+            {course.chapters.map((chapter) => (
+              <li key={chapter.id} className="mb-2">
+                <h3 className="font-semibold">{chapter.name}</h3>
+                <div className="text-sm text-gray-600 ">
+                  <pre>{chapter.chapterContent}</pre>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
