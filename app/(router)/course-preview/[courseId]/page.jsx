@@ -67,8 +67,10 @@ function CoursePreview({ params = { courseId: "clzwxkttu01ii08lb3v2o2nsn" } }) {
                 </button>
               </div>
               {expandedChapters[chapter.id] && (
-                <div className="text-sm text-gray-600">
+                <div className="text-sm text-gray-600 md:text-base lg:text-lg xl:text-xl">
+                  {/* <div className="w-full md:w-3/4 lg:w-2/3 xl:w-1/2 h-48 md:h-64 lg:h-80 xl:h-96 "> */}
                   <pre>{chapter.chapterContent}</pre>
+                  {/* </div> */}
                 </div>
               )}
             </li>
