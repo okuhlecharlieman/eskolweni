@@ -6,7 +6,7 @@ function WelcomeBanner() {
       <div className="">Image</div>
       <div className="">
         <h2 className="font-bold text-[29px]">Welcome to Eskolweni</h2>
-        <h2>Slogan</h2>
+        <h2>Unlocking Education for Everyone, One Click at a Time.</h2>
       </div>
     </div>
   );
