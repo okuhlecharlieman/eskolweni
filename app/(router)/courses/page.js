@@ -2,7 +2,6 @@
 import React from "react";
 import WelcomeBanner from "./_Components/WelcomeBanner";
 import CourseList from "./_Components/CourseList";
-import CoursePreview from "../course-preview/[courseId]/page";
 
 function courses() {
   return (
@@ -12,9 +11,9 @@ function courses() {
         <WelcomeBanner />
         <CourseList />
       </div>
-      <div className="">
-        <CoursePreview />
-      </div>
+      {/* <div className="">
+     
+      </div> */}
     </div>
   );
 }

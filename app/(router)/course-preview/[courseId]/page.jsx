@@ -6,6 +6,7 @@ function CoursePreview({ params = { courseId: "clzwxkttu01ii08lb3v2o2nsn" } }) {
   const [course, setCourse] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [expandedChapters, setExpandedChapters] = useState({}); // State to track expanded chapters
 
   useEffect(() => {
     const fetchCourse = async () => {
@@ -33,60 +34,49 @@ function CoursePreview({ params = { courseId: "clzwxkttu01ii08lb3v2o2nsn" } }) {
     fetchCourse();
   }, [params.courseId]); // Include courseId in the dependency array
 
-  // Render loading, error, or course content
-  //   const renderContent = () => {
-
-  // if (error) {
-  //   return <div className="text-red-500">{error}</div>;
-  // }
-
-  // if (!course) {
-  //   return <div>No course found.</div>;
-  // }
+  // Toggle function for expanding/collapsing chapters
+  const toggleChapter = (chapterId) => {
+    setExpandedChapters((prev) => ({
+      ...prev,
+      [chapterId]: !prev[chapterId], // Toggle the current chapter's expanded state
+    }));
+  };
 
   return loading ? (
     <div>Loading...</div>
   ) : (
-    <div className=" p-4">
+    <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">{course.name}</h1>
-      <div className=" mb-4">
+      <div className="mb-4">
         <h2 className="text-xl font-semibold">Chapters:</h2>
-        <div className="flex flex-col items-center">
-          {" "}
-          <ul className="list-disc pl-5">
-            {course.chapters.map((chapter) => (
-              <li key={chapter.id} className="mb-2">
-                <h3 className="font-semibold">{chapter.name}</h3>
-                <div className="text-sm text-gray-600 ">
+        <ul className="list-disc pl-5">
+          {course.chapters.map((chapter) => (
+            <li key={chapter.id} className="mb-2">
+              <div className="flex items-center justify-between">
+                <h3
+                  className="font-semibold cursor-pointer"
+                  onClick={() => toggleChapter(chapter.id)}
+                >
+                  {chapter.name}
+                </h3>
+                <button
+                  className="ml-2 text-blue-500"
+                  onClick={() => toggleChapter(chapter.id)}
+                >
+                  {expandedChapters[chapter.id] ? "-" : "+"}
+                </button>
+              </div>
+              {expandedChapters[chapter.id] && (
+                <div className="text-sm text-gray-600">
                   <pre>{chapter.chapterContent}</pre>
                 </div>
-              </li>
-            ))}
-          </ul>
-        </div>
+              )}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
-
-  //     <div className="p-4">
-  //       <h1 className="text-2xl font-bold mb-4">{course.name}</h1>
-  //       <div className="mb-4">
-  //         <h2 className="text-xl font-semibold">Chapters:</h2>
-  //         <ul className="list-disc pl-5">
-  //           {course.chapters.map((chapter) => (
-  //             <li key={chapter.id} className="mb-2">
-  //               <h3 className="font-semibold">{chapter.name}</h3>
-  //               <p className="text-sm text-gray-600">
-  //                 {chapter.chapterContent.substring(0, 100)}...
-  //               </p>
-  //             </li>
-  //           ))}
-  //         </ul>
-  //       </div>
-  //     </div>
 }
-
-//   return renderContent();
-// }
 
 export default CoursePreview;
