@@ -8,10 +8,9 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-20">
         <div className="container mx-auto px-6 text-center">
-          <h1 className="text-5xl font-bold mb-6">Welcome to Your WebApp</h1>
+          <h1 className="text-5xl font-bold mb-6">Welcome to Eskolweni</h1>
           <p className="text-xl mb-8">
-            A brief description of what your web app does and how it benefits
-            users.
+            Unlocking Education for Everyone, One Click at a Time.
           </p>
           <Link href="/courses">
             <div className="bg-white text-purple-600 font-bold py-4 px-8 rounded-full shadow-lg uppercase tracking-wider hover:shadow-2xl">
