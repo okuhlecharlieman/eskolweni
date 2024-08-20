@@ -78,6 +78,11 @@ const getCourseWithChapters = async (courseId) => {
             name
             chapterContent
           }
+         ... on Chapter5Id {
+            id
+            name
+            chapterContent
+          }
         }
       }
     }
