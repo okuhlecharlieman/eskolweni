@@ -4,9 +4,15 @@ import Image from "next/image";
 function WelcomeBanner() {
   return (
     <div className="flex gap-5 items-center bg-white rounded-xl p-5">
-      <div className="">
+      <div className="rounded-xl">
         {" "}
-        <Image src="/cute.jfif" alt="Feature 3" width={200} height={200} />{" "}
+        <Image
+          src="/cute.jfif"
+          alt="Feature 3"
+          width={200}
+          height={200}
+          className="rounded-3xl"
+        />{" "}
       </div>
       <div className="">
         <h2 className="font-bold text-[29px]">Welcome to Eskolweni</h2>
