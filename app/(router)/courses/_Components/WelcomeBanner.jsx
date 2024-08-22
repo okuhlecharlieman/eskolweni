@@ -1,9 +1,13 @@
 import React from "react";
+import Image from "next/image";
 
 function WelcomeBanner() {
   return (
     <div className="flex gap-5 items-center bg-white rounded-xl p-5">
-      <div className="">Image</div>
+      <div className="">
+        {" "}
+        <Image src="/cute.jfif" alt="Feature 3" width={200} height={200} />{" "}
+      </div>
       <div className="">
         <h2 className="font-bold text-[29px]">Welcome to Eskolweni</h2>
         <h2>Unlocking Education for Everyone, One Click at a Time.</h2>
