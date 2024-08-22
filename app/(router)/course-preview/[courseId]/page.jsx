@@ -43,7 +43,11 @@ function CoursePreview({ params = { courseId: "clzwxkttu01ii08lb3v2o2nsn" } }) {
   };
 
   return loading ? (
-    <div>Loading...</div>
+    <div className="p-5 m-5 rounded-lg bg-white">
+      <div className=" mb-4">
+        <div>Loading...</div>
+      </div>
+    </div>
   ) : (
     <div className="p-5 m-5 rounded-lg bg-white">
       <div className=" mb-4">
@@ -69,9 +73,9 @@ function CoursePreview({ params = { courseId: "clzwxkttu01ii08lb3v2o2nsn" } }) {
                 </div>
                 {expandedChapters[chapter.id] && (
                   <div className="text-sm text-gray-600 md:text-base lg:text-lg xl:text-xl">
-                    {/* <div className="w-full md:w-3/4 lg:w-2/3 xl:w-1/2 h-48 md:h-64 lg:h-80 xl:h-96 "> */}
-                    <pre>{chapter.chapterContent}</pre>
-                    {/* </div> */}
+                    <div className=" overflow-auto ">
+                      <pre>{chapter.chapterContent}</pre>
+                    </div>
                   </div>
                 )}
               </li>

@@ -28,12 +28,12 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="mb-8">
-                <Image
-                  src="/icons/feature1.svg"
-                  alt="Feature 1"
-                  width={64}
+                {/* <Image
+                  src="/boy.jfif"
+                  alt="Feature 3"
+                  width={200}
                   height={64}
-                />
+                /> */}
               </div>
               <h3 className="text-2xl font-bold mb-4">Feature One</h3>
               <p className="text-gray-600">
@@ -42,12 +42,7 @@ export default function Home() {
             </div>
             <div className="text-center">
               <div className="mb-8">
-                <Image
-                  src="/icons/feature2.svg"
-                  alt="Feature 2"
-                  width={64}
-                  height={64}
-                />
+                {/* <Image src="/boy.jfif" alt="Feature 3" width={64} height={64} /> */}
               </div>
               <h3 className="text-2xl font-bold mb-4">Feature Two</h3>
               <p className="text-gray-600">
@@ -56,12 +51,7 @@ export default function Home() {
             </div>
             <div className="text-center">
               <div className="mb-8">
-                <Image
-                  src="/icons/feature3.svg"
-                  alt="Feature 3"
-                  width={64}
-                  height={64}
-                />
+                {/* <Image src="/boy.jfif" alt="Feature 3" width={64} height={64} /> */}
               </div>
               <h3 className="text-2xl font-bold mb-4">Feature Three</h3>
               <p className="text-gray-600">
@@ -110,7 +100,7 @@ export default function Home() {
             Join thousands of satisfied users who are using our web app to
             improve their productivity.
           </p>
-          <Link href="/signup">
+          <Link href="/courses">
             <div className="bg-white text-purple-600 font-bold py-4 px-8 rounded-full shadow-lg uppercase tracking-wider hover:shadow-2xl">
               Sign Up Now
             </div>
@@ -120,7 +110,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="py-8 bg-gray-800 text-white text-center">
-        <p>&copy; 2024 Your WebApp. All rights reserved.</p>
+        <p>&copy; 2024 Eskolweni. All rights reserved.</p>
       </footer>
     </div>
   );
