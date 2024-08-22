@@ -35,27 +35,49 @@ export default function Home() {
                   height={64}
                 /> */}
               </div>
-              <h3 className="text-2xl font-bold mb-4">Feature One</h3>
+              <h3 className="text-2xl font-bold mb-4">
+                Feature One: Anytime, Anywhere Access
+              </h3>
               <p className="text-gray-600">
-                A brief description of the first feature of your web app.
+                At Eskolweni, we understand the importance of flexibility in
+                learning. Our mobile-friendly platform ensures that learners can
+                access courses and materials anytime, anywhere. Whether you’re
+                commuting, at home, or on a break, our dedicated mobile app
+                promotes learning on the go, making education accessible to
+                everyone.
               </p>
             </div>
             <div className="text-center">
               <div className="mb-8">
                 {/* <Image src="/boy.jfif" alt="Feature 3" width={64} height={64} /> */}
               </div>
-              <h3 className="text-2xl font-bold mb-4">Feature Two</h3>
+              <h3 className="text-2xl font-bold mb-4">
+                Feature Two: Inclusive Learning Options
+              </h3>
               <p className="text-gray-600">
-                A brief description of the second feature of your web app.
+                We believe that education should be available to all. That’s why
+                Eskolweni offers both free and paid options for our Learning
+                Management System (LMS). This approach allows individuals and
+                organizations to choose the plan that best fits their needs,
+                ensuring that everyone has the opportunity to learn and grow.
               </p>
             </div>
             <div className="text-center">
               <div className="mb-8">
                 {/* <Image src="/boy.jfif" alt="Feature 3" width={64} height={64} /> */}
               </div>
-              <h3 className="text-2xl font-bold mb-4">Feature Three</h3>
+              <h3 className="text-2xl font-bold mb-4">
+                Feature Three: Global Learning Empowerment
+              </h3>
               <p className="text-gray-600">
-                A brief description of the third feature of your web app.
+                Education knows no boundaries. Our LMS empowers learners from
+                around the world to acquire knowledge and skills at their own
+                pace. With a diverse range of courses available, anyone from
+                anywhere can engage in meaningful learning experiences,
+                regardless of their location. This revised version enhances
+                clarity, engagement, and the overall presentation of your LMS
+                features. Let me know if you need any further adjustments or
+                additional content!
               </p>
             </div>
           </div>
