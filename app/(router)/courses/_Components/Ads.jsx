@@ -1,41 +1,38 @@
-import GlobalApi from "@/app/_utils/GlobalApi";
-import React, { useEffect, useState } from "react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import CourseItem from "./CourseItem";
-import Image from "next/image";
-import Link from "next/link";
+import React, { useEffect } from "react";
 
 function Ads() {
-  const [courseList, setCourseList] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    getAllCourses();
+    const script = document.createElement("script");
+    script.src =
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5922051928401423";
+    script.async = true;
+    script.crossOrigin = "anonymous";
+    document.body.appendChild(script);
+
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
+
+    return () => {
+      document.body.removeChild(script);
+    };
   }, []);
-  const getAllCourses = () => {
-    let TurnIntoArray = [];
-    GlobalApi.getAllCoursesList()
-      .then((resp) => {
-        console.log("API Response:", resp);
-        console.log("Array Response:", resp.coursespluralid);
-        setCourseList(resp.coursespluralid);
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching courses:", error);
-        setCourseList([]); // Set an empty array on error
-        setIsLoading(false);
-      });
-  };
+
   return (
     <div className="p-5 mt-5 rounded-lg bg-white">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-[20px] font-bold">Ads</h2>
+        {/* <h2 className="text-[20px] font-bold">Ads</h2> */}
+        <div style={{ width: "100%", minWidth: "200px", height: "320px" }}>
+          <ins
+            className="adsbygoogle"
+            style={{
+              display: "block",
+              width: "100%",
+              height: "100%",
+            }}
+            data-ad-format="autorelaxed"
+            data-ad-client="ca-pub-5922051928401423"
+            data-ad-slot="2031609536"
+          />
+        </div>
       </div>
     </div>
   );
