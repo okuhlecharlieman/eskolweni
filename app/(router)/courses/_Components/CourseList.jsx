@@ -22,9 +22,8 @@ function CourseList() {
     GlobalApi.getAllCoursesList()
       .then((resp) => {
         console.log("API Response:", resp);
-        TurnIntoArray.push(resp?.coursesid);
-        console.log("TurnIntoArray Response:", TurnIntoArray);
-        setCourseList(TurnIntoArray);
+        console.log("Array Response:", resp.coursespluralid);
+        setCourseList(resp.coursespluralid);
         setIsLoading(false);
       })
       .catch((error) => {

@@ -5,8 +5,8 @@ console.log("master url", MASTER_url);
 
 const getAllCoursesList = async () => {
   const query = gql`
-    query MyQuery {
-      coursesid(where: { id: "clzwxkttu01ii08lb3v2o2nsn" }) {
+      query MyQuery {
+  coursespluralid {
         banner {
           url
         }
@@ -79,6 +79,31 @@ const getCourseWithChapters = async (courseId) => {
             chapterContent
           }
          ... on Chapter5Id {
+            id
+            name
+            chapterContent
+          }
+             ... on Chapter6Id {
+            id
+            name
+            chapterContent
+          }
+             ... on Chapter7Id {
+            id
+            name
+            chapterContent
+          }
+             ... on Chapter8Id {
+            id
+            name
+            chapterContent
+          }
+             ... on Chapter9Id {
+            id
+            name
+            chapterContent
+          }
+             ... on Chapter10Id {
             id
             name
             chapterContent
