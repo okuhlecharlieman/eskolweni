@@ -70,9 +70,17 @@ function CourseList() {
                   />
                   <div className="flex flex-col gap-1 p-3">
                     <h2 className="font-semibold">{item.name}</h2>
-                    <h2 className="text-sm text-gray-500">
-                      {item.free ? "Free" : "Paid"}
-                    </h2>
+                    <div className="flex  justify-between items-center">
+                      {" "}
+                      <h2 className="text-sm text-gray-500">
+                        {item.free ? "Free" : "Paid"}
+                      </h2>
+                      <h2 className="text-sm text-gray-500">
+                        {" "}
+                        Chapters:
+                        {item.totalChapters}
+                      </h2>
+                    </div>
                   </div>
                 </div>
               </Link>
