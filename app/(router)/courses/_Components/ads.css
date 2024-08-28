@@ -1,0 +1,36 @@
+.video-container {
+  max-height: 400px; /* Set max height for the container */
+  overflow-y: auto; /* Enable vertical scrolling */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center iframes horizontally */
+}
+
+/* Style for individual video wrapper */
+.video-wrapper {
+  width: 100%; /* Full width for responsiveness */
+  max-width: 560px; /* Set a max width for the iframes */
+  position: relative; /* For positioning */
+}
+
+/* Responsive iframe */
+iframe {
+  width: 100%; /* Full width */
+  height: 200px; /* Fixed height */
+  border: none; /* Remove default border */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Custom scrollbar for WebKit browsers */
+.video-container::-webkit-scrollbar {
+  width: 8px; /* Width of scrollbar */
+}
+
+.video-container::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.video-container::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color when hovered */
+}
